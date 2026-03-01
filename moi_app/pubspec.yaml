@@ -30,4 +30,10 @@ flutter:
   # Assets
   # Make sure your images are inside the 'assets' folder in your project
   assets:
-    - assets/
+    - assets/musical_soul.png
+    - assets/immersive_soul.png
+    - assets/meditative_soul.png
+    - assets/pampered_soul.png
+    - assets/ignited_soul.png
+    - assets/artist_soul.png
+    - assets/visualizer_soul.png
