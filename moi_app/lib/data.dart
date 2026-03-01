@@ -9,7 +9,7 @@ class Question {
   factory Question.fromFirestore(Map<String, dynamic> data) {
     // Check if the key is 'text' or 'questionText' based on your Firestore
     return Question(
-      text: data['prompt'] ?? data['questionText'] ?? 'Question missing...', 
+      text: data['prompt'] ?? data['questionText'] ?? 'Question missing...',
       options: List<String>.from(data['options'] ?? []),
     );
   }
@@ -20,7 +20,8 @@ Future<List<Question>> getQuestionsFromFirestore() async {
   try {
     print("Fetching questions...");
     QuerySnapshot snapshot = await FirebaseFirestore.instance
-        .collection('quizQuestions') // Check if this matches your Firebase collection name exactly
+        .collection(
+            'CreationQuizQuestions') // Check if this matches your Firebase collection name exactly
         .get();
 
     if (snapshot.docs.isEmpty) {
